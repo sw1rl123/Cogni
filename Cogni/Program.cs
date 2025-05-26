@@ -173,4 +173,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+app.Run($"http://*:{Environment.GetEnvironmentVariable("PORT") ?? "8080"}");
